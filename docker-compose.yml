@@ -1,0 +1,21 @@
+services:
+  backend:
+    build: ./documind-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./documind-backend/.env
+    environment:
+      - PORT=5000
+      - FRONTEND_URL=http://localhost:3000
+    restart: unless-stopped
+
+  frontend:
+    build: ./documind-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+    depends_on:
+      - backend
+    restart: unless-stopped

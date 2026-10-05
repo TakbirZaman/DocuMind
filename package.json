@@ -1,0 +1,28 @@
+{
+  "name": "documind",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chat with your PDFs — RAG-powered document Q&A (Next.js + Express + MongoDB + OpenAI)",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=documind-backend\" \"npm run dev --workspace=documind-frontend\"",
+    "dev:backend": "npm run dev --workspace=documind-backend",
+    "dev:frontend": "npm run dev --workspace=documind-frontend",
+    "install:all": "npm install --workspace=documind-backend && npm install --workspace=documind-frontend",
+    "build": "npm run build --workspace=documind-frontend",
+    "start": "npm run start --workspace=documind-backend & npm run start --workspace=documind-frontend",
+    "lint": "echo \"No lint configured yet\"",
+    "setup": "node scripts/setup.js"
+  },
+  "workspaces": [
+    "documind-backend",
+    "documind-frontend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["rag", "pdf", "chat", "openai", "nextjs", "express", "mongodb"],
+  "license": "MIT"
+}

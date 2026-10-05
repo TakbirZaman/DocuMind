@@ -1,0 +1,36 @@
+# Dependencies (keep lockfiles — remove line below if you want to ignore them)
+node_modules/
+yarn.lock
+pnpm-lock.yaml
+
+# Env files — never commit real secrets
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Next.js
+documind-frontend/.next/
+documind-frontend/out/
+documind-frontend/.vercel/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Uploads / temp
+uploads/
+tmp/
